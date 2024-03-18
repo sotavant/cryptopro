@@ -374,12 +374,15 @@ class CryptoPro
 			$cadesHashedData->set_Algorithm(CADESCOM_HASH_ALGORITHM::HASH_CP_GOST_3411_2012_256);
 			$cadesHashedData->set_DataEncoding(CADESCOM_CONTENT_ENCODING_TYPE::BASE64_TO_BINARY);
 			$cadesHashedData->SetHashValue($messageHash);
+			//$cadesHashedData->HashValue = $messageHash;
 
 			$cadesSignedData->set_ContentEncoding(CADESCOM_CONTENT_ENCODING_TYPE::BASE64_TO_BINARY);
 			// Для получения объекта отсоединенной (открепленной) подписи, необходимо задать любой контент.
 			// Этот баг описан на форуме.
 			// https://www.cryptopro.ru/forum2/default.aspx?g=posts&m=78553#post78553
-			$cadesSignedData->set_Content(123);
+			// upd (18.03.2024): вроде пофиксили, сейчас с ним ошибка
+			//$cadesSignedData->SetContent(123);
+			//$cadesSignedData->Content = 123;
 		}
 		catch (\Throwable $e)
 		{

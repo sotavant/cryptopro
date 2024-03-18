@@ -10,6 +10,7 @@ try {
     $hash = \Webmasterskaya\CryptoPro\CryptoPro::createHash($string);
     $signature = Webmasterskaya\CryptoPro\CryptoPro::createDetachedSignature($certThumbprint, $hash, $pass);
     dump($signature);
+    file_put_contents("sign.txt", $signature);
 } catch (Exception $e) {
     dump($e);
 }
