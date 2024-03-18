@@ -29,12 +29,12 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2 <8.0",
+		"php": ">=7.2 <8.4",
 		"ext-mbstring": "*"
 	},
 	"require-dev": {
 		"phpstan/phpstan": "^1.9",
-		"webmasterskaya/crypto-pro-php-stubs": "^1.0"
+		"webmasterskaya/crypto-pro-php-stubs": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
@@ -45,7 +45,10 @@
 		"optimize-autoloader": true,
 		"preferred-install": "dist",
 		"sort-packages": true,
-		"process-timeout": 3600
+		"process-timeout": 3600,
+		"platform": {
+			"php": "7.4"
+		}
 	},
 	"scripts": {
 		"phpstan": "phpstan analyse"
