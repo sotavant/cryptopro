@@ -614,6 +614,7 @@ class CryptoPro
 		{
 			$cadesHashedData->set_Algorithm(CADESCOM_HASH_ALGORITHM::HASH_CP_GOST_3411_2012_256);
 			$cadesHashedData->set_DataEncoding(CADESCOM_CONTENT_ENCODING_TYPE::BASE64_TO_BINARY);
+
 			$cadesHashedData->Hash($messageBase64);
 		}
 		catch (\Throwable $e)
